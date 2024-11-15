@@ -5,7 +5,7 @@ using namespace std;
 
 LinkedList::Node::Node(int value = 0) : value(value), next(NULL) {}
 
-LinkedList::LinkedList() : size(0), head(NULL) {}
+LinkedList::LinkedList() : size(0), head(NULL), tail(NULL) {}
 LinkedList::~LinkedList() {
     Node *current = head;
     Node *next;
@@ -23,6 +23,7 @@ void LinkedList::addNodeToHead(int value) {
     Node *newNode = new Node(value);
     if (head == NULL) {
         head = newNode;
+        tail = newNode;
     }
     else {
         newNode->next = head;
@@ -36,6 +37,7 @@ void LinkedList::addNodetoTail(int value) {
     Node *newNode = new Node(value);
     if (head == NULL) {
         head = newNode;
+        tail = newNode;
     }
     else {
         Node *current = head;
@@ -43,6 +45,7 @@ void LinkedList::addNodetoTail(int value) {
             current = current->next;
         }
         current->next = newNode;
+        tail = newNode;
     }
 
     size++;
@@ -55,6 +58,7 @@ void LinkedList::adNodeBeforeNode(int value, int valueBefore) {
 
     if (head == NULL) {
         head = newNode;
+        tail = newNode;
         size++;
         return;
     }

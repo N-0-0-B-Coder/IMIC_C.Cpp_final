@@ -8,7 +8,7 @@ void printList(LinkedList *_list) {
     LinkedList::Node *current = _list->head;
     cout << "Linked List: ";
     while (current != NULL) {
-        cout << current->value;
+        cout << current->value << ":" << &current;
         current = current->next;
         if (current != NULL) {
             cout << " -> ";
@@ -19,7 +19,7 @@ void printList(LinkedList *_list) {
     }
 }
 
-void createNodeInList(LinkedList *_list) {
+void createNodes(LinkedList *_list) {
 
     // addNoteToHead(value)
     _list->addNodeToHead(1);
@@ -67,8 +67,10 @@ void findMinValue(LinkedList *_list) {
     cout << "Min value: " << min << endl;
 }
 
-void bai2(LinkedList *_list) {
-    createNodeInList(_list);
+int bai2(LinkedList *_list) {
+    createNodes(_list);
     findMaxValue(_list);
     findMinValue(_list);
+
+    return 1;
 }

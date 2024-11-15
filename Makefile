@@ -16,6 +16,7 @@ SRC_CPP = \
 	main.cpp  \
 	src/BAI_1.cpp \
 	src/BAI_2.cpp \
+	src/BAI_3.cpp \
 
 
 # Method for converting source files to object files

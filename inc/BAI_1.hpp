@@ -1,5 +1,5 @@
-#ifndef BAI_1_H
-#define BAI_1_H
+#ifndef BAI_1_HPP
+#define BAI_1_HPP
 
 class LinkedList {
 private:
@@ -13,6 +13,7 @@ public:
         Node(int value);
     };
     Node *head;
+    Node *tail;
 
     LinkedList();
     ~LinkedList();
