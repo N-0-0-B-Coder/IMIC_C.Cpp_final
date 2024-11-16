@@ -48,21 +48,6 @@ void detectLoop(const char *a, LinkedList *_list) {
 
 }
 
-void printList(const char *a, LinkedList *_list) {
-    LinkedList::Node *current = _list->head;
-    cout << a << ": ";
-    while (current != NULL) {
-        cout << current->value << ":" << &current;
-        current = current->next;
-        if (current != NULL) {
-            cout << " -> ";
-        }
-        else {
-            cout << endl;
-        }
-    }
-}
-
 int bai3(LinkedList *_listA, LinkedList *_listB) {
     createNewNodes(_listA);
     createNewNodes(_listB);

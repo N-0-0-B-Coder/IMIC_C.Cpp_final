@@ -4,21 +4,6 @@
 
 using namespace std;
 
-void printList(LinkedList *_list) {
-    LinkedList::Node *current = _list->head;
-    cout << "Linked List: ";
-    while (current != NULL) {
-        cout << current->value << ":" << &current;
-        current = current->next;
-        if (current != NULL) {
-            cout << " -> ";
-        }
-        else {
-            cout << endl;
-        }
-    }
-}
-
 void createNodes(LinkedList *_list) {
 
     // addNoteToHead(value)
@@ -38,7 +23,7 @@ void createNodes(LinkedList *_list) {
     _list->adNodeBeforeNode(5, 3);
 
     // deleteNode(value)
-    printList(_list);
+    printList("List", _list);
 }
 
 void findMaxValue(LinkedList *_list) {

@@ -24,4 +24,6 @@ public:
     void deleteNode(int value);
 };
 
+void printList(const char *a, LinkedList *_list);
+
 #endif
