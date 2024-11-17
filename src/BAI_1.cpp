@@ -9,13 +9,11 @@ LinkedList::LinkedList() : size(0), head(NULL), tail(NULL) {}
 LinkedList::~LinkedList() {
     Node *current = head;
     Node *next;
-
     while (current != NULL) {
         next = current->next;
         delete current;
         current = next;
     }
-
     size = 0;
 }
 
@@ -29,7 +27,6 @@ void LinkedList::addNodeToHead(int value) {
         newNode->next = head;
         head = newNode;
     }
-
     size++;
 }
 
@@ -40,18 +37,13 @@ void LinkedList::addNodetoTail(int value) {
         tail = newNode;
     }
     else {
-        Node *current = head;
-        while (current->next != NULL) {
-            current = current->next;
-        }
-        current->next = newNode;
+        tail->next = newNode;
         tail = newNode;
     }
-
     size++;
 }
 
-void LinkedList::adNodeBeforeNode(int value, int valueBefore) {
+void LinkedList::adNodeBeforeNode(int value, int valueExisted) {
     Node *newNode = new Node(value);
     Node *current = head;
     Node *prev = NULL;
@@ -63,7 +55,7 @@ void LinkedList::adNodeBeforeNode(int value, int valueBefore) {
         return;
     }
 
-    while (current != NULL && current->value != valueBefore) {
+    while (current != NULL && current->value != valueExisted) {
         prev = current;
         current = current->next;
     }
@@ -80,7 +72,7 @@ void LinkedList::adNodeBeforeNode(int value, int valueBefore) {
         size++;
     }
     else {
-        cout << "The value before is not found in the list" << endl;
+        cout << "The existed value is not found in the list" << endl;
     }
 }
 

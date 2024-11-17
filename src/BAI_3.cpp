@@ -15,15 +15,14 @@ void createNewNodes(LinkedList *_list) {
 }
 
 void createLoop(LinkedList *_list) {
-    LinkedList::Node *temp;
     LinkedList::Node *current = _list->head;
     while (current != NULL) {
         if (current->value == 5) {
-            temp = current;
+            break;
         }
         current = current->next;
     }
-    _list->tail->next = temp;
+    _list->tail->next = current;
 }
 
 void detectLoop(const char *a, LinkedList *_list) {

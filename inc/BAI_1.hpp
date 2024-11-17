@@ -20,7 +20,7 @@ public:
 
     void addNodeToHead(int value);
     void addNodetoTail(int value);
-    void adNodeBeforeNode(int value, int valueBefore);
+    void adNodeBeforeNode(int value, int valueExisted);
     void deleteNode(int value);
 };
 

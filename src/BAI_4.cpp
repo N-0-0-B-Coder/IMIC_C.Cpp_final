@@ -4,35 +4,25 @@
 using namespace std;
 
 Singleton::Singleton() {
-    cout << "Create instance" << endl;
+    cout << "Object created" << endl;
 }
 
 Singleton::~Singleton() {
-    delete instance;
+    delete object;
 }
 
-Singleton::Singleton(const Singleton &b) {
-    instance = b.instance;
-    age = b.age;
-    name = b.name;
-}
-
-Singleton Singleton::operator=(const Singleton &b) {
-    instance = b.instance;
-    age = b.age;
-    name = b.name;
-    return *this;
-}
-
-Singleton *Singleton::instance = nullptr;
+Singleton *Singleton::object = nullptr;
 int Singleton::age = 0;
 string Singleton::name = "";
 
-Singleton *Singleton::getInstance() {
-    if (instance == nullptr) {
-        instance = new Singleton();
+Singleton *Singleton::getObject() {
+    if (object == nullptr) {
+        object = new Singleton();
     }
-    return instance;
+    else {
+        cout << "Object already created" << endl;
+    }
+    return object;
 }
 
 void Singleton::setAge(int age) {
