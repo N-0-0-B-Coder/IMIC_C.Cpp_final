@@ -57,8 +57,8 @@ int main(void) {
 
 #ifdef BAI_4
     /*
-    Singleton class la class chi cho phep tao ra 1 object duy nhat.
-    Phuong phap/operator tao object khac se bi xoa bo khi khoi tao class.
+    Singleton pattern la phuong phap tao class chi cho phep tao ra 1 object duy nhat.
+    Method/operator tao object khac se bi xoa bo khi khoi tao class.
     Tat ca cac object khac duoc tao ra deu se la object dau tien.
     Class Singleton van co the khai bao nhu mot bien toan cuc nhung phai su dung method de co the truy cap vao gia tri.
     */
@@ -69,6 +69,15 @@ int main(void) {
 #endif
 
 #ifdef BAI_5
+    /*
+    Factory pattern cung cap mot phuong thuc de tao ra cac doi tuong trong lop cha,
+    nhung khong can chi tiet cua cac lop con.
+    Factory pattern cung cap mot cach de thay doi cac lop con ma khong can thay doi lop cha.
+    Factory pattern duoc su dung khi viec khai bao kieu object duoc xac dinh trong qua trinh chuong trinh chay.
+    Co the them hoac xoa cac class con ma khong lam anh huong toi lop cha hoac cac class con khac.
+    Factory pattern dong goi phuong thuc tao object trong qua trinh chay.
+    Nguoi su dung khong can biet chi tiet ve cach tao tung object trong qua trinh khai bao. Chi can goi phuong thuc tao object.
+    */
     int result5 = bai5();
     checkRunning(result5);
 #endif
